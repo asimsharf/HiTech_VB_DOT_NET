@@ -1,0 +1,42 @@
+C:\Users\Khattab Aljaily\AppData\Local\Temporary Projects\CMS\bin\Debug\CMS.exe.config
+C:\Users\Khattab Aljaily\AppData\Local\Temporary Projects\CMS\bin\Debug\CMS.exe
+C:\Users\Khattab Aljaily\AppData\Local\Temporary Projects\CMS\bin\Debug\CMS.pdb
+C:\Users\Khattab Aljaily\AppData\Local\Temporary Projects\CMS\bin\Debug\CMS.xml
+C:\Users\Khattab Aljaily\AppData\Local\Temporary Projects\CMS\obj\Debug\CMS.Resources.resources
+C:\Users\Khattab Aljaily\AppData\Local\Temporary Projects\CMS\obj\Debug\CMS.vbproj.GenerateResource.Cache
+C:\Users\Khattab Aljaily\AppData\Local\Temporary Projects\CMS\obj\Debug\CMS.exe
+C:\Users\Khattab Aljaily\AppData\Local\Temporary Projects\CMS\obj\Debug\CMS.xml
+C:\Users\Khattab Aljaily\AppData\Local\Temporary Projects\CMS\obj\Debug\CMS.pdb
+D:\Projects\VB.NET\CMS\CMS\bin\Debug\CMS.exe.config
+D:\Projects\VB.NET\CMS\CMS\obj\Debug\CMS.exe
+D:\Projects\VB.NET\CMS\CMS\obj\Debug\CMS.xml
+D:\Projects\VB.NET\CMS\CMS\obj\Debug\CMS.pdb
+D:\Projects\VB.NET\CMS\CMS\bin\Debug\CMS.exe
+D:\Projects\VB.NET\CMS\CMS\bin\Debug\CMS.pdb
+D:\Projects\VB.NET\CMS\CMS\bin\Debug\CMS.xml
+D:\Projects\VB.NET\CMS\CMS\obj\Debug\CMS.Main.resources
+D:\Projects\VB.NET\CMS\CMS\obj\Debug\CMS.Resources.resources
+D:\Projects\VB.NET\CMS\CMS\obj\Debug\CMS.vbproj.GenerateResource.Cache
+D:\Projects\VB.NET\CMS\CMS\obj\Debug\CMS.Clinics.resources
+D:\Projects\VB.NET\CMS\CMS\obj\Debug\CMS.Sample.resources
+D:\Projects\VB.NET\CMS\CMS\obj\Debug\CMS.Patients.resources
+D:\Projects\VB.NET\CMS\CMS\obj\Debug\CMS.Services.resources
+D:\Projects\VB.NET\CMS\CMS\obj\Debug\CMS.Newcheck.resources
+D:\Projects\VB.NET\CMS\CMS\obj\Debug\CMS.Checkback.resources
+D:\Projects\VB.NET\CMS\CMS\obj\Debug\CMS.Document.resources
+D:\Projects\VB.NET\CMS\CMS\obj\Debug\CMS.Msg.resources
+D:\Projects\VB.NET\CMS\CMS\obj\Debug\CMS.SqlServerSetting.resources
+D:\Projects\VB.NET\CMS\CMS\obj\Debug\CMS.Searchpatient.resources
+D:\Projects\VB.NET\CMS\CMS\obj\Debug\CMS.Confirm.resources
+D:\Projects\VB.NET\CMS\CMS\obj\Debug\CMS.ImageViewer.resources
+D:\Projects\VB.NET\CMS\CMS\obj\Debug\CMS.Depts.resources
+D:\Projects\VB.NET\CMS\CMS\obj\Debug\CMS.Taxes.resources
+D:\Projects\VB.NET\CMS\CMS\obj\Debug\CMS.Searchdoctor.resources
+D:\Projects\VB.NET\CMS\CMS\obj\Debug\CMS.Documentdoc.resources
+D:\Projects\VB.NET\CMS\CMS\obj\Debug\CMS.Doctors.resources
+D:\Projects\VB.NET\CMS\CMS\obj\Debug\CMS.Users.resources
+D:\Projects\VB.NET\CMS\CMS\obj\Debug\CMS.Login.resources
+D:\Projects\VB.NET\CMS\CMS\obj\Debug\CMS.Invoices.resources
+D:\Projects\VB.NET\CMS\CMS\obj\Debug\CMS.Useract.resources
+D:\Projects\VB.NET\CMS\CMS\obj\Debug\CMS.Invoice.resources
+D:\Projects\VB.NET\CMS\CMS\bin\Debug\HijriDate.dll

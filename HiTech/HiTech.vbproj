@@ -1,0 +1,1504 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A2F420F9-61A3-40DE-A5B4-50A9042E38A7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>HiTech.My.MyApplication</StartupObject>
+    <RootNamespace>HiTech</RootNamespace>
+    <AssemblyName>HiTech</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>HiTech.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>HiTech.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.Engine.13.0.4000\lib\net40\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ClientDoc, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.ClientDoc.13.0.4000\lib\net40\CrystalDecisions.ReportAppServer.ClientDoc.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.CommLayer.13.0.4000\lib\net40\CrystalDecisions.ReportAppServer.CommLayer.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonControls, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.CommonControls.13.0.4000\lib\net40\CrystalDecisions.ReportAppServer.CommonControls.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonObjectModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.CommonObjectModel.13.0.4000\lib\net40\CrystalDecisions.ReportAppServer.CommonObjectModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Controllers, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.Controllers.13.0.4000\lib\net40\CrystalDecisions.ReportAppServer.Controllers.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CubeDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.CubeDefModel.13.0.4000\lib\net40\CrystalDecisions.ReportAppServer.CubeDefModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.DataDefModel.13.0.4000\lib\net40\CrystalDecisions.ReportAppServer.DataDefModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataSetConversion, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.DataSetConversion.13.0.4000\lib\net40\CrystalDecisions.ReportAppServer.DataSetConversion.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ObjectFactory, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.ObjectFactory.13.0.4000\lib\net40\CrystalDecisions.ReportAppServer.ObjectFactory.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Prompting, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.Prompting.13.0.4000\lib\net40\CrystalDecisions.ReportAppServer.Prompting.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ReportDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.ReportDefModel.13.0.4000\lib\net40\CrystalDecisions.ReportAppServer.ReportDefModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.XmlSerialize, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.XmlSerialize.13.0.4000\lib\net40\CrystalDecisions.ReportAppServer.XmlSerialize.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportSource.13.0.4000\lib\net40\CrystalDecisions.ReportSource.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.Shared.13.0.4000\lib\net40\CrystalDecisions.Shared.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <HintPath>..\packages\CrystalReports.FlashControlV71.13.0.3501\lib\net20\FlashControlV71.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="HijriDate">
+      <HintPath>C:\Users\Khattab Aljaily\Downloads\DateTime\DateTime\DateTime\bin\Debug\HijriDate.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.12\lib\net45\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.Smo, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="ShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <HintPath>..\packages\CrystalReports.FlashControlV71.13.0.3501\lib\net20\ShockwaveFlashObjects.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="CrystalDecisions.CrystalReports.EMFServerMessageFactory" />
+    <Import Include="CrystalDecisions.CrystalReports.Engine" />
+    <Import Include="CrystalDecisions.CrystalReports.Engine.Migration" />
+    <Import Include="CrystalDecisions.CrystalReports.EPFPageObjectFactory" />
+    <Import Include="CrystalDecisions.CrystalReports.ETFTotallerTreeFactory" />
+    <Import Include="CrystalDecisions.CrystalReports.SCREventLog" />
+    <Import Include="CrystalDecisions.CrystalReports.TSLV" />
+    <Import Include="CrystalDecisions.CrystalReports.ViewerObjectModel" />
+    <Import Include="CrystalDecisions.ReportAppServer" />
+    <Import Include="CrystalDecisions.ReportAppServer.ClientDoc" />
+    <Import Include="CrystalDecisions.ReportAppServer.CommLayer" />
+    <Import Include="CrystalDecisions.ReportAppServer.CommonControls" />
+    <Import Include="CrystalDecisions.ReportAppServer.CommonObjectModel" />
+    <Import Include="CrystalDecisions.ReportAppServer.Controllers" />
+    <Import Include="CrystalDecisions.ReportAppServer.CubeDefModel" />
+    <Import Include="CrystalDecisions.ReportAppServer.DataDefModel" />
+    <Import Include="CrystalDecisions.ReportAppServer.DataSetConversion" />
+    <Import Include="CrystalDecisions.ReportAppServer.ObjectFactory" />
+    <Import Include="CrystalDecisions.ReportAppServer.Prompting" />
+    <Import Include="CrystalDecisions.ReportAppServer.ReportDefModel" />
+    <Import Include="CrystalDecisions.ReportAppServer.Utilities" />
+    <Import Include="CrystalDecisions.ReportAppServer.XmlSerialize" />
+    <Import Include="CrystalDecisions.ReportSource" />
+    <Import Include="CrystalDecisions.Shared" />
+    <Import Include="CrystalDecisions.Shared.Interop" />
+    <Import Include="CrystalDecisions.Shared.Json" />
+    <Import Include="CrystalDecisions.Web.HtmlReportRender" />
+    <Import Include="CrystalDecisions.Windows.Forms" />
+    <Import Include="CrystalDecisions.Windows.Forms.Internal.Win32" />
+    <Import Include="FlashControlV71" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Forms\Checkback.designer.vb">
+      <DependentUpon>Checkback.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Checkback.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Confirm.designer.vb">
+      <DependentUpon>Confirm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Confirm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Clinics.designer.vb">
+      <DependentUpon>Clinics.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Clinics.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Clinic.designer.vb">
+      <DependentUpon>Clinic.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Clinic.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Clinicdoc.designer.vb">
+      <DependentUpon>Clinicdoc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Clinicdoc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Clinicrecord.designer.vb">
+      <DependentUpon>Clinicrecord.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Clinicrecord.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cats.designer.vb">
+      <DependentUpon>Cats.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cats.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Colors.designer.vb">
+      <DependentUpon>Colors.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Colors.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Newcheckrec.designer.vb">
+      <DependentUpon>Newcheckrec.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Newcheckrec.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DocNewcheck.designer.vb">
+      <DependentUpon>DocNewcheck.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DocNewcheck.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VisitPatient.designer.vb">
+      <DependentUpon>VisitPatient.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VisitPatient.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OldPrescrips.designer.vb">
+      <DependentUpon>OldPrescrips.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OldPrescrips.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Prescription.designer.vb">
+      <DependentUpon>Prescription.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Prescription.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reqlist.designer.vb">
+      <DependentUpon>Reqlist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reqlist.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Searchrequest.designer.vb">
+      <DependentUpon>Searchrequest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Searchrequest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Documenttec.designer.vb">
+      <DependentUpon>Documenttec.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Documenttec.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Searchtechnicians.designer.vb">
+      <DependentUpon>Searchtechnicians.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Searchtechnicians.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Technicians.designer.vb">
+      <DependentUpon>Technicians.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Technicians.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Labinvoice.designer.vb">
+      <DependentUpon>Labinvoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Labinvoice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Drugs.designer.vb">
+      <DependentUpon>Drugs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Drugs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LabServices.designer.vb">
+      <DependentUpon>LabServices.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LabServices.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ImpPays.designer.vb">
+      <DependentUpon>ImpPays.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ImpPays.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pinvoices.designer.vb">
+      <DependentUpon>Pinvoices.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pinvoices.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Documentimp.designer.vb">
+      <DependentUpon>Documentimp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Documentimp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Searchimporter.designer.vb">
+      <DependentUpon>Searchimporter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Searchimporter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Importers.designer.vb">
+      <DependentUpon>Importers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Importers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PatientInvoices.designer.vb">
+      <DependentUpon>PatientInvoices.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PatientInvoices.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InvEdit.designer.vb">
+      <DependentUpon>InvEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InvEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Previnvoices.designer.vb">
+      <DependentUpon>Previnvoices.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Previnvoices.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Senditems.designer.vb">
+      <DependentUpon>Senditems.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Senditems.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Masrofat.designer.vb">
+      <DependentUpon>Masrofat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Masrofat.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reqs2.designer.vb">
+      <DependentUpon>Reqs2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reqs2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\QtyIn.designer.vb">
+      <DependentUpon>QtyIn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\QtyIn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\QtyOut.designer.vb">
+      <DependentUpon>QtyOut.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\QtyOut.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Purchases.designer.vb">
+      <DependentUpon>Purchases.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Purchases.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stockrequest.designer.vb">
+      <DependentUpon>Stockrequest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stockrequest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stock.designer.vb">
+      <DependentUpon>Stock.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stock.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Searchitem.designer.vb">
+      <DependentUpon>Searchitem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Searchitem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Items.designer.vb">
+      <DependentUpon>Items.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Items.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reqs.designer.vb">
+      <DependentUpon>Reqs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reqs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Labrequest.designer.vb">
+      <DependentUpon>Labrequest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Labrequest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Prescrips.designer.vb">
+      <DependentUpon>Prescrips.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Prescrips.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Searchclinic.designer.vb">
+      <DependentUpon>Searchclinic.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Searchclinic.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Medicalreport.designer.vb">
+      <DependentUpon>Medicalreport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Medicalreport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Newcheckdoc.designer.vb">
+      <DependentUpon>Newcheckdoc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Newcheckdoc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Waitlist.designer.vb">
+      <DependentUpon>Waitlist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Waitlist.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Documentinsur.designer.vb">
+      <DependentUpon>Documentinsur.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Documentinsur.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Searchinsurance.designer.vb">
+      <DependentUpon>Searchinsurance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Searchinsurance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Insurance.designer.vb">
+      <DependentUpon>Insurance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Insurance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Searchuser.designer.vb">
+      <DependentUpon>Searchuser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Searchuser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Invpays.designer.vb">
+      <DependentUpon>Invpays.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Invpays.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Nats.designer.vb">
+      <DependentUpon>Nats.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Nats.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pdfreader.designer.vb">
+      <DependentUpon>Pdfreader.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pdfreader.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Waitlistold.designer.vb">
+      <DependentUpon>Waitlistold.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Waitlistold.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Checkrep.designer.vb">
+      <DependentUpon>Checkrep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Checkrep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Userincome.designer.vb">
+      <DependentUpon>Userincome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Userincome.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Reciept.designer.vb">
+      <DependentUpon>Reciept.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Reciept.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Technician.designer.vb">
+      <DependentUpon>Technician.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Technician.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Uservenue.designer.vb">
+      <DependentUpon>Uservenue.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Uservenue.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Invoicesrep3.designer.vb">
+      <DependentUpon>Invoicesrep3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Invoicesrep3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Patientsrep.designer.vb">
+      <DependentUpon>Patientsrep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Patientsrep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Invoicesrep2.designer.vb">
+      <DependentUpon>Invoicesrep2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Invoicesrep2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Imppaymentsrep.designer.vb">
+      <DependentUpon>Imppaymentsrep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Imppaymentsrep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Pinvoice.designer.vb">
+      <DependentUpon>Pinvoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Pinvoice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Invoicesrep_doc.designer.vb">
+      <DependentUpon>Invoicesrep_doc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Invoicesrep_doc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Paymentsrep.designer.vb">
+      <DependentUpon>Paymentsrep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Paymentsrep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Salesrep.designer.vb">
+      <DependentUpon>Salesrep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Salesrep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Purchasesrep.designer.vb">
+      <DependentUpon>Purchasesrep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Purchasesrep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Masrofatrep.designer.vb">
+      <DependentUpon>Masrofatrep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Masrofatrep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Importdet.designer.vb">
+      <DependentUpon>Importdet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Importdet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Requestdet.designer.vb">
+      <DependentUpon>Requestdet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Requestdet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Stockqty.designer.vb">
+      <DependentUpon>Stockqty.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Stockqty.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Req2.designer.vb">
+      <DependentUpon>Req2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Req2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Req.designer.vb">
+      <DependentUpon>Req.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Req.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Prescrip.designer.vb">
+      <DependentUpon>Prescrip.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Prescrip.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Invoicesrep.designer.vb">
+      <DependentUpon>Invoicesrep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Invoicesrep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Medrep.designer.vb">
+      <DependentUpon>Medrep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Medrep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Doctor.designer.vb">
+      <DependentUpon>Doctor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Doctor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Patient.designer.vb">
+      <DependentUpon>Patient.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Patient.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Revenue.designer.vb">
+      <DependentUpon>Revenue.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Revenue.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Invoice.designer.vb">
+      <DependentUpon>Invoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Invoice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Useract.designer.vb">
+      <DependentUpon>Useract.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Useract.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Invoices.designer.vb">
+      <DependentUpon>Invoices.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Invoices.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login.designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Users.designer.vb">
+      <DependentUpon>Users.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Users.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Searchdoctor.designer.vb">
+      <DependentUpon>Searchdoctor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Searchdoctor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Documentdoc.designer.vb">
+      <DependentUpon>Documentdoc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Documentdoc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Doctors.designer.vb">
+      <DependentUpon>Doctors.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Doctors.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Taxes.designer.vb">
+      <DependentUpon>Taxes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Taxes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Depts.designer.vb">
+      <DependentUpon>Depts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Depts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ImageViewer.designer.vb">
+      <DependentUpon>ImageViewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ImageViewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Searchpatient.designer.vb">
+      <DependentUpon>Searchpatient.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Searchpatient.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SqlServerSetting.designer.vb">
+      <DependentUpon>SqlServerSetting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SqlServerSetting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Msg.designer.vb">
+      <DependentUpon>Msg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Msg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Document.designer.vb">
+      <DependentUpon>Document.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Document.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Newcheck.designer.vb">
+      <DependentUpon>Newcheck.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Newcheck.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Services.designer.vb">
+      <DependentUpon>Services.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Services.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Patients.designer.vb">
+      <DependentUpon>Patients.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Patients.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Sample.designer.vb">
+      <DependentUpon>Sample.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Sample.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Main.designer.vb">
+      <DependentUpon>Main.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Func.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\Checkback.resx">
+      <DependentUpon>Checkback.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Confirm.resx">
+      <DependentUpon>Confirm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Clinics.resx">
+      <DependentUpon>Clinics.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Clinic.resx">
+      <DependentUpon>Clinic.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Clinicdoc.resx">
+      <DependentUpon>Clinicdoc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Clinicrecord.resx">
+      <DependentUpon>Clinicrecord.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cats.resx">
+      <DependentUpon>Cats.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Colors.resx">
+      <DependentUpon>Colors.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Newcheckrec.resx">
+      <DependentUpon>Newcheckrec.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DocNewcheck.resx">
+      <DependentUpon>DocNewcheck.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VisitPatient.resx">
+      <DependentUpon>VisitPatient.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OldPrescrips.resx">
+      <DependentUpon>OldPrescrips.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Prescription.resx">
+      <DependentUpon>Prescription.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reqlist.resx">
+      <DependentUpon>Reqlist.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Searchrequest.resx">
+      <DependentUpon>Searchrequest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Documenttec.resx">
+      <DependentUpon>Documenttec.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Searchtechnicians.resx">
+      <DependentUpon>Searchtechnicians.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Technicians.resx">
+      <DependentUpon>Technicians.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Labinvoice.resx">
+      <DependentUpon>Labinvoice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Drugs.resx">
+      <DependentUpon>Drugs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LabServices.resx">
+      <DependentUpon>LabServices.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ImpPays.resx">
+      <DependentUpon>ImpPays.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pinvoices.resx">
+      <DependentUpon>Pinvoices.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Documentimp.resx">
+      <DependentUpon>Documentimp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Searchimporter.resx">
+      <DependentUpon>Searchimporter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Importers.resx">
+      <DependentUpon>Importers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PatientInvoices.resx">
+      <DependentUpon>PatientInvoices.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InvEdit.resx">
+      <DependentUpon>InvEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Previnvoices.resx">
+      <DependentUpon>Previnvoices.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Senditems.resx">
+      <DependentUpon>Senditems.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Masrofat.resx">
+      <DependentUpon>Masrofat.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reqs2.resx">
+      <DependentUpon>Reqs2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\QtyIn.resx">
+      <DependentUpon>QtyIn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\QtyOut.resx">
+      <DependentUpon>QtyOut.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Purchases.resx">
+      <DependentUpon>Purchases.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stockrequest.resx">
+      <DependentUpon>Stockrequest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stock.resx">
+      <DependentUpon>Stock.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Searchitem.resx">
+      <DependentUpon>Searchitem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Items.resx">
+      <DependentUpon>Items.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reqs.resx">
+      <DependentUpon>Reqs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Labrequest.resx">
+      <DependentUpon>Labrequest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Prescrips.resx">
+      <DependentUpon>Prescrips.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Searchclinic.resx">
+      <DependentUpon>Searchclinic.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Medicalreport.resx">
+      <DependentUpon>Medicalreport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Newcheckdoc.resx">
+      <DependentUpon>Newcheckdoc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Waitlist.resx">
+      <DependentUpon>Waitlist.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Documentinsur.resx">
+      <DependentUpon>Documentinsur.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Searchinsurance.resx">
+      <DependentUpon>Searchinsurance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Insurance.resx">
+      <DependentUpon>Insurance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Searchuser.resx">
+      <DependentUpon>Searchuser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Invpays.resx">
+      <DependentUpon>Invpays.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Nats.resx">
+      <DependentUpon>Nats.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pdfreader.resx">
+      <DependentUpon>Pdfreader.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Waitlistold.resx">
+      <DependentUpon>Waitlistold.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Checkrep.resx">
+      <DependentUpon>Checkrep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Userincome.resx">
+      <DependentUpon>Userincome.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Reciept.resx">
+      <DependentUpon>Reciept.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Technician.resx">
+      <DependentUpon>Technician.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Uservenue.resx">
+      <DependentUpon>Uservenue.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Invoicesrep3.resx">
+      <DependentUpon>Invoicesrep3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Patientsrep.resx">
+      <DependentUpon>Patientsrep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Invoicesrep2.resx">
+      <DependentUpon>Invoicesrep2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Imppaymentsrep.resx">
+      <DependentUpon>Imppaymentsrep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Pinvoice.resx">
+      <DependentUpon>Pinvoice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Invoicesrep_doc.resx">
+      <DependentUpon>Invoicesrep_doc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Paymentsrep.resx">
+      <DependentUpon>Paymentsrep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Salesrep.resx">
+      <DependentUpon>Salesrep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Purchasesrep.resx">
+      <DependentUpon>Purchasesrep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Masrofatrep.resx">
+      <DependentUpon>Masrofatrep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Importdet.resx">
+      <DependentUpon>Importdet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Requestdet.resx">
+      <DependentUpon>Requestdet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Stockqty.resx">
+      <DependentUpon>Stockqty.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Req2.resx">
+      <DependentUpon>Req2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Req.resx">
+      <DependentUpon>Req.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Prescrip.resx">
+      <DependentUpon>Prescrip.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Invoicesrep.resx">
+      <DependentUpon>Invoicesrep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Medrep.resx">
+      <DependentUpon>Medrep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Doctor.resx">
+      <DependentUpon>Doctor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Patient.resx">
+      <DependentUpon>Patient.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Revenue.resx">
+      <DependentUpon>Revenue.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Invoice.resx">
+      <DependentUpon>Invoice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Useract.resx">
+      <DependentUpon>Useract.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Invoices.resx">
+      <DependentUpon>Invoices.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Users.resx">
+      <DependentUpon>Users.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Searchdoctor.resx">
+      <DependentUpon>Searchdoctor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Documentdoc.resx">
+      <DependentUpon>Documentdoc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Doctors.resx">
+      <DependentUpon>Doctors.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Taxes.resx">
+      <DependentUpon>Taxes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Depts.resx">
+      <DependentUpon>Depts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ImageViewer.resx">
+      <DependentUpon>ImageViewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Searchpatient.resx">
+      <DependentUpon>Searchpatient.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SqlServerSetting.resx">
+      <DependentUpon>SqlServerSetting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Msg.resx">
+      <DependentUpon>Msg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Document.resx">
+      <DependentUpon>Document.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Newcheck.resx">
+      <DependentUpon>Newcheck.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Services.resx">
+      <DependentUpon>Services.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Patients.resx">
+      <DependentUpon>Patients.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sample.resx">
+      <DependentUpon>Sample.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Main.resx">
+      <DependentUpon>Main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Resources\Wait.ani" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8d5e1c25a7b7526b5713a115f7158245.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\about.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aboutb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accounts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accountsb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\categories.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\categoriesb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clients.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clientsb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\export.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orders.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ordersb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\products.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\productsb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purchases.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purchasesb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Question.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reports.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reportsb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sales.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salesb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salesman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salesmanb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\services.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\servicesb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settingsb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stockb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\success.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\suppliers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\suppliersb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tools.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toolsb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usersb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usertrack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clinics.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clinicsdark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clinicsdark1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clinicswhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pationsdark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pationswhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doctordark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doctorwhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\visitsdark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\visitswhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\london-medical-centre-doctor-arms-folded.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\52371749-a-doctor-standing-with-first-aid-box-on-a-hospital-background-vector-flat-design-illustration-horizo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attach.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pharmacydark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pharmacywhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stockdark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stockwhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notify.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_489991.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fdcffff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notify1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\success1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6722-03-healthcare-graphics-powerpoint-16x9-2-870x489.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5057_1920x620.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blur-image-background-of-corridor-in-hospital-or-clinic-image-picture-id932038072.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hearing-Loop-Features-and-Benefits-Comparison1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+    <None Include="Resources\Lap.png" />
+    <None Include="Resources\c101.png" />
+    <None Include="Resources\c20.png" />
+    <None Include="Resources\c19.png" />
+    <None Include="Resources\c18.png" />
+    <None Include="Resources\c17.png" />
+    <None Include="Resources\c16.png" />
+    <None Include="Resources\c15.png" />
+    <None Include="Resources\c14.png" />
+    <None Include="Resources\c13.png" />
+    <None Include="Resources\c12.png" />
+    <None Include="Resources\c11.png" />
+    <None Include="Resources\c10.png" />
+    <None Include="Resources\c9.png" />
+    <None Include="Resources\c8.png" />
+    <None Include="Resources\c7.png" />
+    <None Include="Resources\c6.png" />
+    <None Include="Resources\c5.png" />
+    <None Include="Resources\c4.png" />
+    <None Include="Resources\c3.png" />
+    <None Include="Resources\c2.png" />
+    <None Include="Resources\c1.png" />
+    <None Include="Resources\32.png" />
+    <None Include="Resources\30.png" />
+    <None Include="Resources\31.png" />
+    <None Include="Resources\29.png" />
+    <None Include="Resources\28.png" />
+    <None Include="Resources\27.png" />
+    <None Include="Resources\26.png" />
+    <None Include="Resources\25.png" />
+    <None Include="Resources\24.png" />
+    <None Include="Resources\23.png" />
+    <None Include="Resources\22.png" />
+    <None Include="Resources\21.png" />
+    <None Include="Resources\20.png" />
+    <None Include="Resources\19.png" />
+    <None Include="Resources\18.png" />
+    <None Include="Resources\17.png" />
+    <None Include="Resources\16.png" />
+    <None Include="Resources\15.png" />
+    <None Include="Resources\14.png" />
+    <None Include="Resources\13.png" />
+    <None Include="Resources\12.png" />
+    <None Include="Resources\11.png" />
+    <None Include="Resources\10.png" />
+    <None Include="Resources\9.png" />
+    <None Include="Resources\8.png" />
+    <None Include="Resources\7.png" />
+    <None Include="Resources\6.png" />
+    <None Include="Resources\5.png" />
+    <None Include="Resources\4.png" />
+    <None Include="Resources\3.png" />
+    <None Include="Resources\2.png" />
+    <None Include="Resources\1.png" />
+    <None Include="Resources\loading.gif" />
+    <None Include="Resources\login form.jpg" />
+    <None Include="Resources\file-explorer.jpg" />
+    <None Include="Resources\profile-pic-png-3.jpg" />
+    <None Include="Resources\srch.png" />
+    <None Include="Resources\tobill.jpg" />
+    <None Include="Resources\question1.png" />
+    <None Include="Resources\del.png" />
+    <None Include="Resources\Delete.png" />
+    <None Include="Resources\print.png" />
+    <None Include="Resources\view.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
