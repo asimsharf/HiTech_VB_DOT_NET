@@ -150,4 +150,5 @@ Public Class PatientInvoices
             Confirm.ShowDialog()
         End If
     End Sub
+
 End Class

@@ -11,7 +11,8 @@ Public Class Waitlist
 
             Dim dn As New SqlCommand("SELECT dname FROM doctors WHERE uname = '" & un & "'", con)
             dr = dn.ExecuteScalar
-            gt = New SqlCommand("SELECT waitlist.id, waitlist.pid, waitlist.pname, waitlist.invno, waitlist.wstat FROM waitlist WHERE waitlist.doctor = '" & dr & "' AND wstat = 'wait'", con)
+            '  gt = New SqlCommand("SELECT waitlist.id, waitlist.pid, waitlist.pname, waitlist.invno, waitlist.wstat FROM waitlist WHERE waitlist.doctor = '" & dr & "' AND wstat = 'wait'", con)
+            gt = New SqlCommand("SELECT waitlist.id, waitlist.pid, waitlist.pname, waitlist.invno, waitlist.wstat FROM waitlist WHERE wstat = 'wait'", con)
             Dim rdr As SqlDataReader = gt.ExecuteReader
             data.Rows.Clear()
             While rdr.Read

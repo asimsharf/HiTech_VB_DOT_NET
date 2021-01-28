@@ -40,6 +40,7 @@ Partial Class Searchpatient
         Me.frmtitle = New System.Windows.Forms.Label()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.CachedReport1 = New CrystalDecisions.ReportSource.CachedReport()
         Me.Panel1.SuspendLayout()
         CType(Me.data, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -54,16 +55,16 @@ Partial Class Searchpatient
         Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Location = New System.Drawing.Point(3, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1083, 685)
+        Me.Panel1.Size = New System.Drawing.Size(928, 557)
         Me.Panel1.TabIndex = 0
         '
         'sear
         '
-        Me.sear.Location = New System.Drawing.Point(19, 53)
+        Me.sear.Location = New System.Drawing.Point(16, 43)
+        Me.sear.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.sear.Name = "sear"
-        Me.sear.Size = New System.Drawing.Size(960, 24)
+        Me.sear.Size = New System.Drawing.Size(823, 20)
         Me.sear.TabIndex = 17
         '
         'Label2
@@ -71,10 +72,10 @@ Partial Class Searchpatient
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(978, 53)
-        Me.Label2.MinimumSize = New System.Drawing.Size(90, 32)
+        Me.Label2.Location = New System.Drawing.Point(838, 43)
+        Me.Label2.MinimumSize = New System.Drawing.Size(77, 26)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(90, 32)
+        Me.Label2.Size = New System.Drawing.Size(77, 26)
         Me.Label2.TabIndex = 18
         Me.Label2.Text = "بحث"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -89,7 +90,8 @@ Partial Class Searchpatient
         Me.data.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.data.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.pid, Me.Column1, Me.Column2, Me.Column3, Me.Column4})
-        Me.data.Location = New System.Drawing.Point(19, 97)
+        Me.data.Location = New System.Drawing.Point(16, 79)
+        Me.data.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.data.MultiSelect = False
         Me.data.Name = "data"
         Me.data.ReadOnly = True
@@ -100,7 +102,7 @@ Partial Class Searchpatient
         Me.data.RowsDefaultCellStyle = DataGridViewCellStyle1
         Me.data.RowTemplate.Height = 26
         Me.data.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.data.Size = New System.Drawing.Size(1045, 510)
+        Me.data.Size = New System.Drawing.Size(896, 414)
         Me.data.TabIndex = 16
         Me.data.TabStop = False
         '
@@ -144,9 +146,10 @@ Partial Class Searchpatient
         Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.ForeColor = System.Drawing.Color.Black
-        Me.Button2.Location = New System.Drawing.Point(19, 626)
+        Me.Button2.Location = New System.Drawing.Point(16, 509)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(161, 39)
+        Me.Button2.Size = New System.Drawing.Size(138, 32)
         Me.Button2.TabIndex = 15
         Me.Button2.TabStop = False
         Me.Button2.Text = "إغـــلاق"
@@ -159,16 +162,16 @@ Partial Class Searchpatient
         Me.Panel2.Controls.Add(Me.frmtitle)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1083, 38)
+        Me.Panel2.Size = New System.Drawing.Size(928, 31)
         Me.Panel2.TabIndex = 1
         '
         'from
         '
-        Me.from.Location = New System.Drawing.Point(19, 8)
+        Me.from.Location = New System.Drawing.Point(16, 6)
+        Me.from.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.from.Name = "from"
-        Me.from.Size = New System.Drawing.Size(82, 24)
+        Me.from.Size = New System.Drawing.Size(71, 20)
         Me.from.TabIndex = 19
         Me.from.Visible = False
         '
@@ -176,23 +179,22 @@ Partial Class Searchpatient
         '
         Me.frmtitle.AutoSize = True
         Me.frmtitle.ForeColor = System.Drawing.Color.Black
-        Me.frmtitle.Location = New System.Drawing.Point(873, 8)
-        Me.frmtitle.MinimumSize = New System.Drawing.Size(200, 17)
+        Me.frmtitle.Location = New System.Drawing.Point(748, 6)
+        Me.frmtitle.MinimumSize = New System.Drawing.Size(171, 14)
         Me.frmtitle.Name = "frmtitle"
-        Me.frmtitle.Size = New System.Drawing.Size(200, 17)
+        Me.frmtitle.Size = New System.Drawing.Size(171, 14)
         Me.frmtitle.TabIndex = 7
         Me.frmtitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Searchpatient
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1090, 689)
+        Me.ClientSize = New System.Drawing.Size(934, 560)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "Searchpatient"
         Me.Opacity = 0.98R
         Me.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -222,5 +224,5 @@ Partial Class Searchpatient
     Friend WithEvents Column3 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column4 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents from As System.Windows.Forms.TextBox
-
+    Friend WithEvents CachedReport1 As CachedReport
 End Class

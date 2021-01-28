@@ -27,6 +27,8 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -68,6 +70,9 @@
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxAcroPDFLib1">
+      <HintPath>..\..\..\..\Downloads\AxAcroPDFLib\X86\1.0.0.0\AxAcroPDFLib.dll</HintPath>
+    </Reference>
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
       <HintPath>..\packages\CrystalReports.Engine.13.0.4000\lib\net40\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
       <Private>True</Private>
@@ -143,6 +148,14 @@
     <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.SqlServer.Smo, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="PDFNet, Version=8.1.7.6880, Culture=neutral, PublicKeyToken=45663c462b939c60, processorArchitecture=x86">
+      <HintPath>..\packages\PDFNet.8.1.0.76880\lib\net40\PDFNet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PDFNetLoader, Version=1.0.0.2, Culture=neutral, PublicKeyToken=45663c462b939c60, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFNet.8.1.0.76880\lib\net40\PDFNetLoader.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="ShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
       <HintPath>..\packages\CrystalReports.FlashControlV71.13.0.3501\lib\net20\ShockwaveFlashObjects.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
@@ -1494,6 +1507,13 @@
     </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="..\packages\PDFNet.8.1.0.76880\build\net40\PDFNet.targets" Condition="Exists('..\packages\PDFNet.8.1.0.76880\build\net40\PDFNet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\PDFNet.8.1.0.76880\build\net40\PDFNet.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\PDFNet.8.1.0.76880\build\net40\PDFNet.targets'))" />
+  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

@@ -1,6 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Imports System.IO
 Imports System.Drawing.Text
+Imports Font = System.Drawing.Font
 
 Module Func
     Public con As SqlConnection
@@ -317,7 +318,7 @@ Module Func
             Using sr As StreamReader = New StreamReader(Application.StartupPath & "\SQLSettings.dat")
                 st = sr.ReadLine()
             End Using
-
+            '  Dim st = ("Data Source=IGATE-PC;Integrated Security=true;Connect Timeout=30;Encrypt=False;TrustServerCertificate=true;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
             con = New SqlConnection(st)
             con.Open()
             con.Close()

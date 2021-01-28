@@ -320,6 +320,7 @@ Public Class Patients
                 End If
             Next
 
+
             cmdact = New SqlCommand("INSERT INTO useract (uname,details,acdate) VALUES ('" & un & "', 'قام المستخدم " & un & " بإضافة مريض جديد بالرقم " & pid.Text & "', '" & nowdate() & "')", con)
             cmdact.ExecuteNonQuery()
             Cursor = Cursors.Default

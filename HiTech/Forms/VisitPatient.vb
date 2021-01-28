@@ -175,20 +175,22 @@ Public Class VisitPatient
         connect()
         Try
             copen()
-            Dim wl As New SqlCommand("INSERT INTO waitlist(pid,pname,invno,chdate,wstat,doctor) VALUES (@a,@b,@c,@d,@e,@f)", con)
+            Dim wl As New SqlCommand("INSERT INTO waitlist(pid,pname,invno,chdate,wstat,doctor) VALUES (@aa,@bb,@cc,@dd,@ee,@ff)", con)
             With wl.Parameters
-                .Add(New SqlParameter("@a", pid.Text))
-                .Add(New SqlParameter("@b", pname.Text))
-                .Add(New SqlParameter("@c", ""))
-                .Add(New SqlParameter("@d", ""))
-                .Add(New SqlParameter("@e", "wait"))
-                .Add(New SqlParameter("@f", doctor.SelectedItem))
+                .Add(New SqlParameter("@aa", pid.Text))
+                .Add(New SqlParameter("@bb", pname.Text))
+                .Add(New SqlParameter("@cc", 0))
+                .Add(New SqlParameter("@dd", ""))
+                .Add(New SqlParameter("@ee", "wait"))
+                .Add(New SqlParameter("@ff", doctor.SelectedItem))
                 wl.ExecuteNonQuery()
             End With
             cclose()
             alert("تم الإرسال إلى الطبيب", 1)
         Catch ex As Exception
-
+            MsgBox(ex.Message)
         End Try
     End Sub
+
+
 End Class
